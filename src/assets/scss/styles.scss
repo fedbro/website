@@ -1,0 +1,289 @@
+// variable
+$color-background: #fefefe !default;
+$color-text: #333 !default;
+
+
+$font-url: 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' !default;
+$font-name: 'Droid Sans' !default;
+$font-name-mono: 'Droid Sans Mono' !default;
+
+$white: #fff;
+$color-primary: rgb(3, 3, 3);
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+::selection {
+    background: $color-primary;
+}
+
+.hidden {
+    display: none;
+}
+ 
+.container{
+    width: 80%;
+    margin: 0rem auto;
+    font-family:'Gill Sans', 'Gill Sans MT';
+  
+}
+.flex{
+    display: flex;
+   
+}
+a{
+    text-decoration: none;
+}
+ul{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+}
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #15C39A;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    transition: background 0.2s ease-out;
+  }
+  .card{
+    // background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.navbar{
+    background-color:#fff;
+    box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
+    &__container{
+        justify-content: space-between;
+        
+    }
+    &__link{
+        color: $color-text;
+    }
+
+    &__brand{
+        
+        color: $color-text;
+        font-size: 20px;
+        font-weight: 500;
+        padding: .5rem;
+    }
+    &__nav{
+        display: flex;
+        list-style: none;
+
+    }
+    &__item{
+        padding-left: 1rem;
+        color: $color-text;
+
+      
+    }
+}
+
+// Home page
+.home__bg {
+    width: 100%;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(3, 3, 3, 0.952);
+}
+
+// welcome page
+.welcome{
+    &__container{
+       height: 90vh;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: #fff;
+        }
+        
+    }
+}
+
+// login/register page 
+.login{
+    
+    &__container{
+        justify-content: center;
+        // align-items: center;
+
+    }
+    
+}
+.register{
+    
+    &__container{
+        justify-content: center;
+        // align-items: center;
+
+    }
+    
+}
+input:focus{
+    outline: none;
+    box-shadow: inset 2px 2px 5px 0 rgba(42, 45, 48, 0.12);
+}
+form {
+    // background: #fff;
+    max-width: 360px;
+    width: 100%;
+    padding: 58px 44px;
+    border: 1px solid #e1e2f0;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(42, 45, 48, 0.12);
+    transition: all 0.3s ease;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    label {
+        font-size: 13px;
+        color: #8086a9;
+      }
+      input {
+            flex: 1;
+            padding: 13px;
+            border: 1px solid #d6d8e6;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.2s ease-out;
+          }::placeholder {
+            color: #C8CDDF;
+               
+  }
+ 
+}
+.invalid-feedback{
+    background-color: #d83030;
+    // padding: .2rem;
+    padding-left: 12px;
+    border-radius: 10px;
+    color: #fff;
+    transition-timing-function: ease-in;
+}
+
+  @media(max-width: 458px) {
+    
+    body {
+      margin: 0 18px;
+    }
+    
+    form {
+    //   background: #f9faff;
+      border: none;
+      box-shadow: none;
+      padding: 20px 0;
+    }
+  
+  }
+
+//   admin dashboard
+.dashboard{
+    // display: flex;
+    // justify-content: center;
+    // background-color: $color-background;
+
+    min-height: 90vh;
+    box-shadow: 0 -2px bisque;
+}
+.dashboard h1{
+  color: #d6d8e6;
+  margin: 0;
+}
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+        color: #fff;
+      }
+      tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: .35em;
+      }th,td{
+        padding: .625em;
+        text-align: center;
+      }
+      th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+  }
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    
+  
+     caption {
+      font-size: 1.3em;
+    }
+    
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+     tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+     td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+     td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    
+    
+    :last-child {
+      border-bottom: 0;
+    }
+  }
+}
+}
